@@ -1,4 +1,4 @@
-# Requirements v2
+# Requirements v3
 Flask==2.3.3
 Flask-SQLAlchemy==3.1.1
 Flask-JWT-Extended==4.5.3
