@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Flask application entry point.
 
-Version: 3.0.0
+Version: 4.0.0
 """
 import os
 from flask import Flask, jsonify, request
@@ -27,7 +27,7 @@ class User(db.Model):
 @app.route('/health')
 def health():
     """Health check endpoint."""
-    return jsonify({"status": "healthy", "version": "3.0.0"})
+    return jsonify({"status": "healthy", "version": "4.0.0"})
 
 
 @app.route('/api/v1/login', methods=['POST'])
