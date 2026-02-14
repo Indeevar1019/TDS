@@ -11,7 +11,18 @@ load_dotenv(override=True)
 # Setup
 # ----------------------------
 
+from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI()
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+
+
 api=os.getenv("OPENAI_API_KEY")
 client = OpenAI(api_key=api)
 
@@ -188,3 +199,4 @@ def search(req: SearchRequest):
             "totalDocs": len(documents)
         }
     }
+
